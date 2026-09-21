@@ -50,3 +50,7 @@ CONFIG = os.getenv("BUILD_TYPE", "Release")
 OV_RUNTIME_LIBS_DIR = os.getenv("OV_RUNTIME_LIBS_DIR", f"runtime/{LIBS_DIR}/{ARCH}")
 TBB_LIBS_DIR = os.getenv("TBB_LIBS_DIR", f"runtime/3rdparty/tbb/{LIBS_DIR}")
 PUGIXML_LIBS_DIR = os.getenv("PUGIXML_LIBS_DIR", f"runtime/3rdparty/pugixml/{LIBS_DIR}")
+PY_PACKAGES_DIR = os.getenv("PY_PACKAGES_DIR", "python")
+LIBS_RPATH = "$ORIGIN" if sys.platform == "linux" else "@loader_path"
+PYTHON_EXTENSIONS_ONLY = True if os.getenv("PYTHON_EXTENSIONS_ONLY") is not None else False
+SKIP_RPATH = True if os.getenv("SKIP_RPATH") is not None else False
