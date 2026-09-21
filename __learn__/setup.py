@@ -54,3 +54,4 @@ PY_PACKAGES_DIR = os.getenv("PY_PACKAGES_DIR", "python")
 LIBS_RPATH = "$ORIGIN" if sys.platform == "linux" else "@loader_path"
 PYTHON_EXTENSIONS_ONLY = True if os.getenv("PYTHON_EXTENSIONS_ONLY") is not None else False
 SKIP_RPATH = True if os.getenv("SKIP_RPATH") is not None else False
+CPACK_GENERATOR = os.getenv("CPACK_GENERATOR", "TGZ")
