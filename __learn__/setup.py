@@ -43,3 +43,5 @@ elif machine == "riscv64":
 SCRIPT_DIR = Path(__file__).resolve().parent()
 WORKING_DIR = Path.cwd()
 BUILD_BASE = f"build_{PYTHON_VERSION}"
+OPENVINO_SOURCE_DIR = os.getenv("OPENVINO_SOURCE_DIR", SCRIPT_DIR)
+OPENVINO_BINARY_DIR = os.getenv("OPENVINO_BINARY_DIR", f"{OPENVINO_SOURCE_DIR}/build_wheel")
