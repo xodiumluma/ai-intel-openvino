@@ -55,3 +55,13 @@ LIBS_RPATH = "$ORIGIN" if sys.platform == "linux" else "@loader_path"
 PYTHON_EXTENSIONS_ONLY = True if os.getenv("PYTHON_EXTENSIONS_ONLY") is not None else False
 SKIP_RPATH = True if os.getenv("SKIP_RPATH") is not None else False
 CPACK_GENERATOR = os.getenv("CPACK_GENERATOR", "TGZ")
+
+LIB_INSTALL_CFG = {
+    "ie_libs": {
+        "name": "core",
+        "prefix": f"{BUILD_BASE}/libs.core",
+        "install_dir": OV_RUNTIME_LIBS_DIR,
+        "rpath": LIBS_RPATH,
+        "binary_dir": OPENVINO_BINARY_DIR,
+    }
+}
