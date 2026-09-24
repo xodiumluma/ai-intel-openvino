@@ -77,4 +77,11 @@ LIB_INSTALL_CFG = {
         "install_dir": OV_RUNTIME_LIBS_DIR,
         "rpath": LIBS_RPATH,
     },
+    "gpu_plugin": {
+        "name": "gpu",
+        "prefix": f"{BUILD_BASE}/libs.hetero",
+        "install_dir": OV_RUNTIME_LIBS_DIR,
+        "rpath": LIBS_RPATH,
+        "binary_dir": OPENVINO_BINARY_DIR,
+    },
 }
