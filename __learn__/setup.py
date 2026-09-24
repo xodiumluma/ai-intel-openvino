@@ -98,4 +98,11 @@ LIB_INSTALL_CFG = {
         "rpath": LIBS_RPATH,
         "binary_dir": OPENVINO_BINARY_DIR,
     },
+    "multi_plugin": {
+        "name": "multi",
+        "prefix": f"{BUILD_BASE}/libs.multi",
+        "install_dir": OV_RUNTIME_LIBS_DIR,
+        "rpath": LIBS_RPATH,
+        "binary_dir": OPENVINO_BINARY_DIR,
+    },
 }
