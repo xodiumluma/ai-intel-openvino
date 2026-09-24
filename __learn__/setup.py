@@ -84,4 +84,11 @@ LIB_INSTALL_CFG = {
         "rpath": LIBS_RPATH,
         "binary_dir": OPENVINO_BINARY_DIR,
     },
+    "cpu_plugin": {
+        "name": "cpu",
+        "prefix": f"{BUILD_BASE}/libs.cpu",
+        "install_dir": OV_RUNTIME_LIBS_DIR,
+        "rpath": LIBS_RPATH,
+        "binary_dir": OPENVINO_BINARY_DIR,
+    },
 }
